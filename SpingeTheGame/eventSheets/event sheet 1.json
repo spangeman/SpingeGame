@@ -12,6 +12,36 @@
 			"sid": 895275532750404
 		},
 		{
+			"eventType": "variable",
+			"name": "currentCP",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 525425191360551
+		},
+		{
+			"eventType": "variable",
+			"name": "currentCPX",
+			"type": "number",
+			"initialValue": "34",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 730182081034041
+		},
+		{
+			"eventType": "variable",
+			"name": "currentCPY",
+			"type": "number",
+			"initialValue": "1469",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 526169510946431
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Player Movement",
@@ -496,36 +526,36 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 331941290578171,
+					"sid": 516523018525010,
 					"parameters": {
 						"object-to-create": "Camera",
 						"layer": "0",
-						"x": "35",
-						"y": "1469",
+						"x": "currentCPX",
+						"y": "currentCPY",
 						"create-hierarchy": false
 					}
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 612438928369993,
+					"sid": 952854955359057,
 					"parameters": {
 						"object-to-create": "PlayerSprite",
 						"layer": "0",
-						"x": "35",
-						"y": "1469",
+						"x": "currentCPX",
+						"y": "currentCPY",
 						"create-hierarchy": false
 					}
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 305145059971627,
+					"sid": 724238990029804,
 					"parameters": {
 						"object-to-create": "player",
 						"layer": "0",
-						"x": "35",
-						"y": "1469",
+						"x": "currentCPX",
+						"y": "currentCPY",
 						"create-hierarchy": false
 					}
 				},
@@ -1396,6 +1426,67 @@
 			],
 			"sid": 523652602008953,
 			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerSprite",
+					"sid": 347567902228253,
+					"parameters": {
+						"object": "CheckPoint"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "CheckPoint",
+					"sid": 838676240010344,
+					"parameters": {
+						"instance-variable": "Checked",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 274845284198139,
+					"parameters": {
+						"variable": "currentCP",
+						"value": "CheckPoint.Number"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 590266733395430,
+					"parameters": {
+						"variable": "currentCPX",
+						"value": "CheckPoint.X"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 714146343645955,
+					"parameters": {
+						"variable": "currentCPY",
+						"value": "CheckPoint.Y"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "CheckpointFire",
+					"sid": 256000443281458,
+					"parameters": {
+						"x": "CheckPoint.X",
+						"y": "CheckPoint.Y"
+					}
+				}
+			],
+			"sid": 785351497100660
 		}
 	],
 	"sid": 906989763335380

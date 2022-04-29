@@ -166,7 +166,8 @@
 			"InfoBox",
 			"WelcomeText",
 			"SpriteFont",
-			"InvItem"
+			"InvItem",
+			"CheckpointFire"
 		],
 		"subfolders": []
 	},
