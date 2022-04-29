@@ -118,7 +118,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 933,
+						"x": 1551,
 						"y": 1396,
 						"width": 2.672768408472649,
 						"height": 81.65440342926007,
@@ -293,7 +293,8 @@
 					},
 					"uid": 8,
 					"instanceVariables": {
-						"Dir": false
+						"Dir": false,
+						"HP": 3
 					},
 					"behaviors": {
 						"Bullet": {
@@ -470,7 +471,7 @@
 						}
 					},
 					"world": {
-						"x": 936,
+						"x": 1554,
 						"y": 1436,
 						"width": 32.34234828018518,
 						"height": 6,
@@ -501,8 +502,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 292.7093773334142,
-						"y": 1479.8325061633095,
+						"x": 310.63220185268096,
+						"y": 1480.127935612795,
 						"width": 8,
 						"height": 8,
 						"originX": 0.5,
@@ -961,7 +962,7 @@
 				{
 					"type": "WelcomeText",
 					"properties": {
-						"text": "Welcome text!\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+						"text": "A - LEFT\nD - RIGHT\nW - JUMP\nE - INTERACT\nCTRL - SHOOT",
 						"enable-bbcode": true,
 						"character-width": 7,
 						"character-height": 9,
@@ -980,8 +981,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 24.89806040546401,
-						"y": 1378.435934924001,
+						"x": 0.4905702450416243,
+						"y": 1378.0485239037719,
 						"width": 338.9567461144738,
 						"height": 52.922318247638714,
 						"originX": 0,
@@ -999,7 +1000,7 @@
 				{
 					"type": "InvItem",
 					"properties": {
-						"text": "Bow",
+						"text": "BOW",
 						"enable-bbcode": true,
 						"character-width": 7,
 						"character-height": 9,
@@ -1017,7 +1018,7 @@
 					"uid": 14,
 					"instanceVariables": {
 						"InvItemName": "Bow",
-						"PickUpMessage": "You got the Bow!"
+						"PickUpMessage": "YOU GOT THE BOW!"
 					},
 					"behaviors": {},
 					"world": {
@@ -1040,7 +1041,7 @@
 				{
 					"type": "InvItem",
 					"properties": {
-						"text": "Something",
+						"text": "SOMETHING ELSE",
 						"enable-bbcode": true,
 						"character-width": 7,
 						"character-height": 9,
@@ -1058,14 +1059,14 @@
 					"uid": 33,
 					"instanceVariables": {
 						"InvItemName": "Something",
-						"PickUpMessage": "You got Something!"
+						"PickUpMessage": "YOU GOT SOMETHING ELSE!"
 					},
 					"behaviors": {},
 					"world": {
-						"x": 215.4703208704199,
-						"y": 1475.5162528106478,
-						"width": 71.05171919885433,
-						"height": 9.778529199287732,
+						"x": 194.89829776031823,
+						"y": 1475.167563739887,
+						"width": 117.07729748883852,
+						"height": 11.52191709265685,
 						"originX": 0,
 						"originY": 1,
 						"color": [
@@ -1147,6 +1148,246 @@
 						"width": 100,
 						"height": 100,
 						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnemyBobTheBlob",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Walk",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 35,
+					"instanceVariables": {
+						"Dir": false,
+						"HP": 10
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 80,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"Platform": {
+							"properties": {
+								"max-speed": 330,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 1245,
+						"y": 1231,
+						"width": 357.90083010412854,
+						"height": 354.6209721773371,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Wall",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 36,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 787,
+						"y": 1318,
+						"width": 12.082545602062396,
+						"height": 339.5872608446804,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Wall",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 37,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1404.5,
+						"y": 1313,
+						"width": 9.082545602062396,
+						"height": 361.5872608446804,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CoinSprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Spin",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 46,
+					"instanceVariables": {
+						"Coins": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 319.6541985230576,
+						"y": 1480.1117261919837,
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CoinSprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Spin",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 47,
+					"instanceVariables": {
+						"Coins": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 328.7569695857779,
+						"y": 1480.0072813161464,
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CoinSprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Spin",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 48,
+					"instanceVariables": {
+						"Coins": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 337.7789662561545,
+						"y": 1479.9910718953352,
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CoinSprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Spin",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 49,
+					"instanceVariables": {
+						"Coins": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 301.7159802142085,
+						"y": 1480.0394533183967,
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,

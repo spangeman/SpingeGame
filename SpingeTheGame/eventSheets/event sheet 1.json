@@ -42,6 +42,16 @@
 			"sid": 526169510946431
 		},
 		{
+			"eventType": "variable",
+			"name": "PlayerHasBow",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 364187555914018
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Player Movement",
@@ -608,11 +618,11 @@
 					}
 				},
 				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "PlayerSprite",
-					"sid": 966759866642522,
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 948221204237550,
 					"parameters": {
-						"instance-variable": "HasBow"
+						"variable": "PlayerHasBow"
 					}
 				}
 			],
@@ -1072,9 +1082,13 @@
 			],
 			"actions": [
 				{
-					"id": "destroy",
+					"id": "subtract-from-instvar",
 					"objectClass": "EnemyBobTheBlob",
-					"sid": 484029529313394
+					"sid": 863827225440132,
+					"parameters": {
+						"instance-variable": "HP",
+						"value": "1"
+					}
 				},
 				{
 					"id": "create-object",
@@ -1102,7 +1116,60 @@
 					"sid": 924545300627778
 				}
 			],
-			"sid": 720548104636173
+			"sid": 720548104636173,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 391322126586178
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "EnemyBobTheBlob",
+					"sid": 503510816906321,
+					"parameters": {
+						"object": "BowArrow"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "EnemyBobTheBlob",
+					"sid": 455072691087446,
+					"parameters": {
+						"instance-variable": "HP",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "EnemyBobTheBlob",
+					"sid": 724684623157854
+				}
+			],
+			"sid": 314026254355920,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "EnemyBobTheBlob",
+							"sid": 561930203539737
+						}
+					],
+					"sid": 730404554215949
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -1264,11 +1331,11 @@
 					],
 					"actions": [
 						{
-							"id": "set-boolean-instvar",
-							"objectClass": "PlayerSprite",
-							"sid": 949812887690079,
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 243458766052292,
 							"parameters": {
-								"instance-variable": "HasBow",
+								"variable": "PlayerHasBow",
 								"value": "true"
 							}
 						},
