@@ -255,7 +255,7 @@
 								"max-speed": 100,
 								"acceleration": 1000,
 								"deceleration": 1000,
-								"jump-strength": 300,
+								"jump-strength": 400,
 								"gravity": 1500,
 								"max-fall-speed": 1000,
 								"double-jump": false,
@@ -820,146 +820,6 @@
 					}
 				},
 				{
-					"type": "PlatformWall",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 43,
-					"instanceVariables": {},
-					"behaviors": {
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 592.5,
-						"y": 1413.450771519561,
-						"width": -33.01241711670673,
-						"height": 13,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "PlatformWall",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 42,
-					"instanceVariables": {},
-					"behaviors": {
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 592.5,
-						"y": 1461.4719177255322,
-						"width": -33.01241711670673,
-						"height": 13,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "PlatformWall",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 44,
-					"instanceVariables": {},
-					"behaviors": {
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 592.5,
-						"y": 1387.4237036846407,
-						"width": -33.01241711670673,
-						"height": 13,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "PlatformWall",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 45,
-					"instanceVariables": {},
-					"behaviors": {
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 592.5,
-						"y": 1436.4591391591528,
-						"width": -33.01241711670673,
-						"height": 13,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "WelcomeText",
 					"properties": {
 						"text": "A - LEFT\nD - RIGHT\nW - JUMP\nE - INTERACT\nCTRL - SHOOT",
@@ -1201,8 +1061,8 @@
 						}
 					},
 					"world": {
-						"x": 1245,
-						"y": 1231,
+						"x": 1231,
+						"y": 1235,
 						"width": 357.90083010412854,
 						"height": 354.6209721773371,
 						"originX": 0.5,
@@ -1398,6 +1258,41 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "PlatformWall",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 42,
+					"instanceVariables": {},
+					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 592.8375515255103,
+						"y": 1393.3837097870553,
+						"width": -33.01241711670673,
+						"height": 13,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 873574922027041,
@@ -1531,14 +1426,19 @@
 								"enabled": true,
 								"live-preview": false
 							}
+						},
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
 						}
 					},
 					"world": {
 						"x": -831.2716415423403,
 						"y": 516.006188209155,
-						"width": 7,
+						"width": 10,
 						"height": 3,
-						"originX": 0.5,
+						"originX": 0.35,
 						"originY": 0.5,
 						"color": [
 							1,
